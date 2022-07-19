@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Register</title>
+
+    <style>
+      *
+      {
+        font-family: Serif, Times New Roman, serif;;
+      }
+      .form-control
+      {
+        min-width: 350px;
+        box-shadow: 1px 1px 2px 1px rgba(0.9, 0, 0, 0.2) !important;
+        border-radius: 15px !important;
+        background: #fffcfa !important;
+      }
+      .login-label
+      {
+        font-size: 18px;
+        color: #0071a8;
+        padding: .2em;
+      }
+    
+      /* The container */
+      .container1 {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default radio button */
+      .container1 input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      /* Create a custom radio button */
+      .checkmark1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container1:hover input ~ .checkmark1 {
+        background-color: #ccc;
+      }
+
+      /* When the radio button is checked, add a blue background */
+      .container1 input:checked ~ .checkmark1 {
+        background-color: #0071a8;
+      }
+
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark1:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the indicator (dot/circle) when checked */
+      .container1 input:checked ~ .checkmark1:after {
+        display: block;
+      }
+
+      /* Style the indicator (dot/circle) */
+      .container1 .checkmark1:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+
+      .custom-file-upload {
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+    </style>
+  </head>
+  <body">
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('../assets/img/home4.jpg');"></div>
+    <div class="contents order-2 order-md-1" style="overflow-y: scroll; margin: 20px 15px;">
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-7">
+            <h5 style="color: gray; font-size: 18px;">Register on </h5><h1><strong>Nyumba Zetu KE </strong></h1>
+            <p class="mb-4" style="color: #2f2626;">Already registered? <a style="color: #d79214; font-size: 15px;" href="login.html">Sign in</a></p>
+            <form action="process_register.php" method="post" enctype="multipart/form-data">
+
+              <div class="form-group first">
+                <label class='login-label' for="name">Name</label>
+                <input type="text" class="form-control" placeholder="Full name" name="name" minlength="2" id="name" required>
+              </div>
+              <div class="form-group first">
+                <label class='login-label' for="email">Email</label>
+                <input type="email" class="form-control" placeholder="your-email@gmail.com" name="email" minlength="7" id="email" required>
+              </div>
+              <div class="form-group last mb-3">
+                <label class='login-label' for="gender">Gender</label>
+                <select class="form-control" id="gender" name="gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="None">Rather not say</option>
+                </select>
+              </div>
+              
+              
+              <div class="form-group first">
+                <label class='login-label' for="phone">Phone Number</label>
+                <input type="int" minlength="10" maxlength="12" class="form-control" placeholder="0712345678" id="phone_number" name="phone_number">
+              </div>
+              <div class="form-group last mb-3">
+                <label class='login-label' for="location">Location</label>
+                <input list="location_list" class="form-control" type="text" id="location" name="location" required placeholder="My Town">
+                <datalist id="location_list">
+                  <option value="Kisumu">Kisumu</option>
+                  <option value="Lamu">Lamu</option>
+                  <option value="Mombasa">Mombasa</option>
+                  <option value="Machakos">Machakos</option>
+                  <option value="Marsabit">Marsabit</option>
+                  <option value="Malindi">Malindi</option>
+                  <option value="Naivasha">Naivasha</option>
+                  <option value="Nairobi">Nairobi</option>
+                  <option value="Nakuru">Nakuru</option>
+                  <option value="Narok">Narok</option>
+                  <option value="Nanyuki">Nanyuki</option>
+                  <option value="Muranga">Muranga</option>
+                  <option value="Nyeri">Nyeri</option>
+                </datalist>
+              </div>
+
+              <label class="login-label">Pick the Account Type:</label>
+              <div class="form-group first">
+                
+                <label class="container1">Broker
+                <input type="radio" name="account" id="broker" value="broker">
+                <span class="checkmark1"></span>
+              </label>
+              <label class="container1">Tenant
+                <input type="radio" name="account" id="client" value="client">
+                <span class="checkmark1"></span>
+              </label>
+              <label class="container1">Property Owner
+                <input type="radio" name="account" id="owner" value="owner">
+                <span class="checkmark1"></span>
+              </label>
+              <br>
+              </div>
+              <br>
+              <div class="form-group first">
+                  <label class='login-label custom-file-upload' for="profile">Picture</label>
+                  <input style="display: none;" type="file" id="profile" class="form-control" name="file">
+                </div>
+              <div class="form-group last mb-3">
+                <label class='login-label' for="new_pwd">New Password</label> 
+                <input type="password" class="form-control" placeholder="Your Password" name="new_pwd" id="new_pwd">
+              </div>
+              <div class="form-group last mb-3">
+                <label class='login-label' for="confirm_pwd">Confirm Password</label>
+                <input  type="password" class="form-control" placeholder="Confirm Password" id="confirm_pwd" name="confirm_pwd">
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                
+                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+              </div>
+
+              <input type="submit" style="border: !important; font-weight: 600; width: 350px;" value="Register" class="btn btn-block btn-primary">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

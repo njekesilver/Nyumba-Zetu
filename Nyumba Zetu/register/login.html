@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      *
+      {
+        font-family: Serif, Times New Roman, serif;;
+      }
+      .form-control
+      {
+        min-width: 350px;
+        box-shadow: 1px 1px 2px 1px rgba(0.9, 0, 0, 0.2) !important;
+        border-radius: 15px !important;
+        background: #fffcfa !important;
+      }
+      .login-label
+      {
+        font-size: 18px;
+        color: #0071a8;
+        padding: .2em;
+      }
+    </style>
+    <title>Login</title>
+  </head>
+  <body>
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('../assets/img/home4.jpg');"></div>
+    <div class="contents order-2 order-md-1" style="overflow-y: scroll; margin: 20px 15px;">
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-7">
+            <h5 style="color: gray; font-size: 18px;">Login to </h5><h1><strong>Nyumba Zetu KE </strong></h1>
+            <p class="mb-4" style="color: #2f2626;">Don't have an account? <a href="../register/register.html">Sign up</a></p>
+            <form action="process_login.php" method="post">
+              <div class="form-group first">
+                <label class="login-label" for="username">Username</label>
+                <input type="text" class="form-control" placeholder="your-email@gmail.com" name='username' id="username">
+              </div>
+              <div class="form-group last mb-3">
+                <label class="login-label" for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Your Password" name="password" id="password">
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+              </div>
+
+              <input type="submit" value="Log In" class="btn btn-block btn-primary" style="border: !important; font-weight: 600; width: 350px;">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

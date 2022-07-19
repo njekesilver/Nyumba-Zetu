@@ -1,0 +1,50 @@
+.mySlides img
+{
+   	width: 100%;
+	display: block;
+	max-height: 700px;
+	object-fit: cover;
+}
+.w3-col.s4
+{
+	width: 20% !important;
+}
+#rental-slides
+{
+    width: fit-content;
+}
+#rental-data
+{
+    padding: 0 20px
+}
+
+#rental-broker
+{
+    width: 40%;
+    float: right;
+    margin: 30px;
+}
+#rental-info
+{
+	width: 50%;
+	display: inline-block;
+}
+#rental-form
+{
+    width: 50%;
+    margin: 30px;
+}
+.card 
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+		}
+
+.title 
+{
+	color: grey;
+	font-size: 18px;
+}
